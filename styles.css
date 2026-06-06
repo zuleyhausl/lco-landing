@@ -1,1 +1,316 @@
-/* Legendary Club Owner — styles */
+/* =========================================================
+   Legendary Club Owner — Landing Page
+   Design system + Hero section
+   ========================================================= */
+
+/* ---------- Design tokens ---------- */
+:root {
+  /* Surfaces */
+  --bg-base: #0A0F0D;
+  --bg-elevated: #111815;
+
+  /* Text */
+  --text-primary: #F5F5F0;
+  --text-secondary: #A8B0A4;
+
+  /* Accents */
+  --accent-green: #00E676;
+  --accent-gold: #FFB627;
+
+  /* Lines */
+  --border: rgba(255, 255, 255, 0.08);
+
+  /* Layout */
+  --container-max: 1200px;
+  --container-pad: 24px;
+  --section-py-desktop: 80px;
+  --section-py-mobile: 48px;
+}
+
+/* ---------- Reset / base ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+/* =========================================================
+   NAV
+   ========================================================= */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: rgba(10, 15, 13, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav__inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.nav__logo {
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  font-size: 16px;
+  color: var(--text-primary);
+}
+
+.nav__logo-accent {
+  margin-left: 8px;
+  color: var(--accent-green);
+}
+
+.nav__badge {
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  color: var(--accent-green);
+  border: 1px solid var(--accent-green);
+  border-radius: 100px;
+  padding: 6px 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding-top: var(--section-py-desktop);
+  padding-bottom: var(--section-py-desktop);
+  min-height: 85vh;
+  background-image: radial-gradient(
+    ellipse at top right,
+    rgba(0, 230, 118, 0.12) 0%,
+    rgba(0, 230, 118, 0.04) 30%,
+    transparent 60%
+  );
+}
+
+.hero__inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-pad);
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.hero__eyebrow {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  color: var(--text-secondary);
+  margin: 0 0 20px 0;
+  font-weight: 500;
+}
+
+.hero__title {
+  font-size: clamp(40px, 6vw, 72px);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin: 0 0 20px 0;
+}
+
+.hero__title-accent {
+  color: var(--accent-gold);
+}
+
+.hero__subtitle {
+  font-size: clamp(18px, 2vw, 22px);
+  color: var(--text-secondary);
+  font-weight: 500;
+  max-width: 480px;
+  margin: 0 0 32px 0;
+}
+
+.hero__form {
+  display: flex;
+  gap: 8px;
+  max-width: 480px;
+  margin: 0 0 12px 0;
+}
+
+.hero__input {
+  flex: 1;
+  padding: 16px 18px;
+  border-radius: 10px;
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  font-size: 15px;
+  font-family: inherit;
+  transition: border-color 0.15s ease;
+  min-width: 0; /* allow input to shrink in flex */
+}
+
+.hero__input::placeholder {
+  color: var(--text-secondary);
+}
+
+.hero__input:focus {
+  border-color: var(--accent-green);
+  outline: none;
+}
+
+.hero__cta {
+  padding: 16px 28px;
+  border-radius: 10px;
+  background-color: var(--accent-green);
+  color: #000;
+  font-weight: 700;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.hero__cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(0, 230, 118, 0.35);
+}
+
+.hero__cta:focus-visible {
+  outline: 2px solid var(--accent-green);
+  outline-offset: 3px;
+}
+
+.hero__formNote {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin: 0 0 40px 0;
+}
+
+.hero__trust {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+/* Visual ---------------------------------------------------- */
+.hero__visual {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.hero__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero__visualGlow {
+  position: absolute;
+  inset: -20%;
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 230, 118, 0.25) 0%,
+    rgba(0, 230, 118, 0.08) 40%,
+    transparent 70%
+  );
+  filter: blur(60px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* =========================================================
+   Responsive
+   ========================================================= */
+
+/* Stack hero: visual ABOVE content on tablet/mobile */
+@media (max-width: 900px) {
+  .hero__inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hero__visual {
+    order: -1;
+    max-width: 480px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .hero__subtitle,
+  .hero__form {
+    max-width: 100%;
+  }
+}
+
+/* Form stacks vertically on small phones */
+@media (max-width: 600px) {
+  .hero {
+    padding-top: var(--section-py-mobile);
+    padding-bottom: var(--section-py-mobile);
+    min-height: auto;
+  }
+
+  .hero__form {
+    flex-direction: column;
+  }
+
+  .hero__cta {
+    width: 100%;
+  }
+
+  .nav__inner {
+    padding: 14px 20px;
+  }
+
+  .nav__logo {
+    font-size: 14px;
+  }
+}
