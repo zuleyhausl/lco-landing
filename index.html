@@ -116,7 +116,52 @@
       </div>
     </div>
   </section>
-  <!-- PLACEHOLDER: QUIZ -->
+  <!-- QUIZ -->
+  <section class="quiz" id="quiz">
+    <div class="quiz__inner">
+      <header class="section__header">
+        <p class="section__eyebrow">Find your type</p>
+        <h2 class="section__title">What kind of manager are you?</h2>
+        <p class="section__subtitle">Five questions. Thirty seconds. We'll tell you exactly which kind of legend you'd build.</p>
+      </header>
+
+      <div class="quiz__card" id="quizCard">
+        <!-- Progress -->
+        <div class="quiz__progress" id="quizProgress" aria-hidden="true">
+          <div class="quiz__progressBar" id="quizProgressBar"></div>
+        </div>
+
+        <!-- Intro state -->
+        <div class="quiz__state quiz__state--intro" data-state="intro">
+          <div class="quiz__introIcon">⚽</div>
+          <h3 class="quiz__introTitle">Ready to find out?</h3>
+          <p class="quiz__introDesc">No right or wrong answers. Just instinct.</p>
+          <button type="button" class="quiz__primaryBtn" id="startQuizBtn">Start the quiz</button>
+        </div>
+
+        <!-- Question state (populated by JS) -->
+        <div class="quiz__state quiz__state--question" data-state="question" hidden>
+          <p class="quiz__questionMeta">
+            <span id="quizQuestionNumber">1</span> of <span id="quizQuestionTotal">5</span>
+          </p>
+          <h3 class="quiz__questionText" id="quizQuestionText">Question goes here</h3>
+          <ul class="quiz__options" id="quizOptions"></ul>
+        </div>
+
+        <!-- Result state (populated by JS) -->
+        <div class="quiz__state quiz__state--result" data-state="result" hidden>
+          <p class="quiz__resultEyebrow">You are</p>
+          <h3 class="quiz__resultTitle" id="quizResultTitle">The Tactician</h3>
+          <p class="quiz__resultDesc" id="quizResultDesc"></p>
+          <div class="quiz__resultStats" id="quizResultStats"></div>
+          <div class="quiz__resultActions">
+            <a href="#top" class="quiz__primaryBtn" id="quizCtaBtn">Notify me at launch</a>
+            <button type="button" class="quiz__secondaryBtn" id="quizRetakeBtn">Retake quiz</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- PLACEHOLDER: COMING SOON / SIGNUP -->
   <!-- PLACEHOLDER: FOOTER -->
 
