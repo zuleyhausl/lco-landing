@@ -314,3 +314,179 @@ button {
     font-size: 14px;
   }
 }
+
+/* =========================================================
+   SHARED SECTION HEADER
+   ========================================================= */
+.section__header {
+  max-width: 720px;
+  margin: 0 auto 64px;
+  text-align: center;
+}
+.section__eyebrow {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  color: var(--accent-green);
+  font-weight: 700;
+  margin: 0 0 16px;
+}
+.section__title {
+  font-size: clamp(32px, 4.5vw, 52px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0 0 20px;
+  color: var(--text-primary);
+}
+.section__subtitle {
+  font-size: clamp(16px, 1.6vw, 19px);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* =========================================================
+   HOW IT WORKS
+   ========================================================= */
+.how {
+  padding: 96px 0;
+  background: var(--bg-base);
+  border-top: 1px solid var(--border);
+}
+.how__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.how__steps {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  counter-reset: step;
+}
+.how__step {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 32px 24px;
+  position: relative;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+.how__step:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 230, 118, 0.3);
+}
+.how__stepNumber {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--accent-green);
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+  font-variant-numeric: tabular-nums;
+}
+.how__stepTitle {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0 0 12px;
+  color: var(--text-primary);
+}
+.how__stepDesc {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 0;
+}
+@media (max-width: 900px) {
+  .how__steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 560px) {
+  .how__steps {
+    grid-template-columns: 1fr;
+  }
+  .how { padding: 64px 0; }
+}
+
+/* =========================================================
+   WHY LCO
+   ========================================================= */
+.why {
+  padding: 96px 0;
+  background: linear-gradient(180deg, var(--bg-base) 0%, #0D1411 100%);
+  border-top: 1px solid var(--border);
+}
+.why__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.why__titleAccent {
+  color: var(--accent-green);
+}
+.why__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.why__card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 36px 32px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+.why__card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 230, 118, 0.25);
+}
+.why__card--featured {
+  border-color: rgba(255, 182, 39, 0.35);
+  background: linear-gradient(160deg, var(--bg-elevated) 0%, rgba(255, 182, 39, 0.06) 100%);
+}
+.why__icon {
+  font-size: 32px;
+  margin-bottom: 20px;
+  line-height: 1;
+}
+.why__cardTitle {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0 0 12px;
+  color: var(--text-primary);
+}
+.why__cardDesc {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  margin: 0;
+}
+.why__cardStat {
+  margin: 20px 0 0;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+.why__cardStat strong {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--accent-gold);
+  letter-spacing: -0.01em;
+  display: block;
+  margin-bottom: 4px;
+  font-variant-numeric: tabular-nums;
+}
+@media (max-width: 800px) {
+  .why__grid {
+    grid-template-columns: 1fr;
+  }
+  .why { padding: 64px 0; }
+}
