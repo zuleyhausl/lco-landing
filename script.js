@@ -200,3 +200,43 @@ function resetQuiz() {
 // Wire up
 startBtn.addEventListener("click", startQuiz);
 retakeBtn.addEventListener("click", resetQuiz);
+
+// ===== Email form handlers (hero + signup) =====
+// Since this is a pre-launch landing page with no real backend,
+// both forms just acknowledge the submission visually.
+
+function handleSignupSubmit(form) {
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const input = form.querySelector('input[type="email"]');
+    const button = form.querySelector('button[type="submit"]');
+    if (!input || !button) return;
+    const originalText = button.textContent;
+    button.textContent = "You're on the list ✓";
+    button.disabled = true;
+    button.style.background = "var(--accent-gold)";
+    input.value = "";
+    input.disabled = true;
+    setTimeout(() => {
+      button.textContent = originalText;
+      button.disabled = false;
+      button.style.background = "";
+      input.disabled = false;
+    }, 3500);
+  });
+}
+
+const notifyForm = document.getElementById("notifyForm");
+const signupForm = document.getElementById("signupForm");
+if (notifyForm) handleSignupSubmit(notifyForm);
+if (signupForm) handleSignupSubmit(signupForm);
+
+// Also fix the quiz result CTA: scroll smoothly to the signup section instead of #top
+const quizCtaBtn = document.getElementById("quizCtaBtn");
+if (quizCtaBtn) {
+  quizCtaBtn.setAttribute("href", "#signup");
+  quizCtaBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    document.getElementById("signup")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+}
