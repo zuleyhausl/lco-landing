@@ -14,7 +14,7 @@
   --text-secondary: #A8B0A4;
 
   /* Accents */
-  --accent-green: #00E676;
+  --accent-green: #33D9A6;
   --accent-gold: #FFB627;
 
   /* Lines */
@@ -87,16 +87,18 @@ button {
 }
 
 .nav__logo {
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  font-size: 16px;
-  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  line-height: 0;
 }
-
-.nav__logo-accent {
-  margin-left: 8px;
-  color: var(--accent-green);
+.nav__logoImg {
+  height: 44px;
+  width: auto;
+  display: block;
+}
+@media (max-width: 600px) {
+  .nav__logoImg { height: 36px; }
 }
 
 .nav__badge {
@@ -122,8 +124,8 @@ button {
   min-height: 85vh;
   background-image: radial-gradient(
     ellipse at top right,
-    rgba(0, 230, 118, 0.12) 0%,
-    rgba(0, 230, 118, 0.04) 30%,
+    rgba(51, 217, 166, 0.12) 0%,
+    rgba(51, 217, 166, 0.04) 30%,
     transparent 60%
   );
 }
@@ -211,7 +213,7 @@ button {
 
 .hero__cta:hover {
   transform: translateY(-1px);
-  box-shadow: 0 8px 24px rgba(0, 230, 118, 0.35);
+  box-shadow: 0 8px 24px rgba(51, 217, 166, 0.35);
 }
 
 .hero__cta:focus-visible {
@@ -257,8 +259,8 @@ button {
   inset: -20%;
   background: radial-gradient(
     circle at center,
-    rgba(0, 230, 118, 0.25) 0%,
-    rgba(0, 230, 118, 0.08) 40%,
+    rgba(51, 217, 166, 0.25) 0%,
+    rgba(51, 217, 166, 0.08) 40%,
     transparent 70%
   );
   filter: blur(60px);
@@ -308,10 +310,6 @@ button {
 
   .nav__inner {
     padding: 14px 20px;
-  }
-
-  .nav__logo {
-    font-size: 14px;
   }
 }
 
@@ -378,7 +376,7 @@ button {
 }
 .how__step:hover {
   transform: translateY(-4px);
-  border-color: rgba(0, 230, 118, 0.3);
+  border-color: rgba(51, 217, 166, 0.3);
 }
 .how__stepNumber {
   display: inline-block;
@@ -444,7 +442,7 @@ button {
 }
 .why__card:hover {
   transform: translateY(-4px);
-  border-color: rgba(0, 230, 118, 0.25);
+  border-color: rgba(51, 217, 166, 0.25);
 }
 .why__card--featured {
   border-color: rgba(255, 182, 39, 0.35);
@@ -583,7 +581,7 @@ button {
 }
 .quiz__primaryBtn:hover {
   transform: translateY(-1px);
-  box-shadow: 0 8px 24px rgba(0, 230, 118, 0.25);
+  box-shadow: 0 8px 24px rgba(51, 217, 166, 0.25);
 }
 .quiz__primaryBtn:focus-visible {
   outline: 2px solid var(--accent-green);
@@ -648,7 +646,7 @@ button {
 }
 .quiz__option:hover {
   border-color: var(--accent-green);
-  background: rgba(0, 230, 118, 0.04);
+  background: rgba(51, 217, 166, 0.04);
 }
 .quiz__option:active {
   transform: scale(0.99);
@@ -731,7 +729,7 @@ button {
 .signup {
   padding: 120px 0;
   background:
-    radial-gradient(ellipse at center top, rgba(0, 230, 118, 0.08), transparent 60%),
+    radial-gradient(ellipse at center top, rgba(51, 217, 166, 0.08), transparent 60%),
     linear-gradient(180deg, #0D1411 0%, var(--bg-base) 100%);
   border-top: 1px solid var(--border);
   text-align: center;
@@ -813,7 +811,7 @@ button {
 }
 .signup__cta:hover {
   transform: translateY(-1px);
-  box-shadow: 0 8px 24px rgba(0, 230, 118, 0.25);
+  box-shadow: 0 8px 24px rgba(51, 217, 166, 0.25);
 }
 .signup__cta:focus-visible {
   outline: 2px solid var(--accent-green);
@@ -893,4 +891,10 @@ button {
   margin: 0;
   opacity: 0.7;
   letter-spacing: 0.02em;
+}
+.footer__logoImg {
+  height: 56px;
+  width: auto;
+  display: block;
+  margin-bottom: 4px;
 }
