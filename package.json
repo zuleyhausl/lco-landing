@@ -1,0 +1,26 @@
+{
+  "name": "lco-landing",
+  "version": "1.0.0",
+  "description": "Legendary Club Owner — landing page case study",
+  "private": true,
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:report": "playwright show-report"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zuleyhausl/lco-landing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/zuleyhausl/lco-landing/issues"
+  },
+  "homepage": "https://github.com/zuleyhausl/lco-landing#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.60.0"
+  }
+}
