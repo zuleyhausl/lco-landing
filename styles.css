@@ -79,7 +79,7 @@ button {
 .nav__inner {
   max-width: var(--container-max);
   margin: 0 auto;
-  padding: 16px 24px;
+  padding: 20px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -93,12 +93,12 @@ button {
   line-height: 0;
 }
 .nav__logoImg {
-  height: 44px;
+  height: 56px;
   width: auto;
   display: block;
 }
 @media (max-width: 600px) {
-  .nav__logoImg { height: 36px; }
+  .nav__logoImg { height: 44px; }
 }
 
 .nav__badge {
